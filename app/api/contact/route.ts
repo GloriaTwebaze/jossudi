@@ -1,0 +1,55 @@
+import { Resend } from 'resend'
+import { NextRequest, NextResponse } from 'next/server'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json()
+    const { name, email, phone, subject, message } = body
+
+    // Validate required fields
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    // Send email using Resend
+    const result = await resend.emails.send({
+      from: 'JOSSUD <onboarding@resend.dev>', // to replace with verified domain after paying for hostinger
+      to: 'info@jossud.org',
+      replyTo: email,
+      subject: `New Contact Form Submission: ${subject || 'No Subject'}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+        ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ''}
+        <h3>Message:</h3>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
+    })
+
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      )
+    }
+
+    return NextResponse.json(
+      { success: true, message: 'Email sent successfully' },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error('Contact form error:', error)
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    )
+  }
+}
