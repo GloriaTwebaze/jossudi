@@ -19,42 +19,44 @@ import {
 } from '@/components/animations'
 
 export const metadata: Metadata = {
-  title: 'JOSSUD - Empowering PWDs in Uganda',
+  title: 'JOSUDDI - Empowering PWDs in Uganda',
   description: 'Supporting Persons with Disabilities in Kampala and Wakiso through advocacy, entrepreneurship, savings groups, and community initiatives.',
   openGraph: {
-    title: 'JOSSUD - Empowering PWDs in Uganda',
+    title: 'JOSUDDI - Empowering PWDs in Uganda',
     description: 'Supporting Persons with Disabilities in Kampala and Wakiso through advocacy, entrepreneurship, savings groups, and community initiatives.',
     type: 'website',
   },
 }
 
 export default function Home() {
+  const foundedYear = 2022
+  const yearsOfImpact = new Date().getFullYear()-foundedYear
   const programs = [
     {
       icon: Heart,
       title: 'Savings Groups (VSLAs)',
-      description: 'Community-led Village Savings and Loan Associations that empower PWDs to build financial independence.',
+      description: 'We mobilize people with disabilities into self-help groups where members save weekly, access revolving loans, and grow their financial independence together.',
       href: '/programs',
       color: 'bg-orange-100 text-orange-600',
     },
     {
       icon: Users,
       title: 'Entrepreneurship Support',
-      description: 'Training and resources to help PWDs start and grow their own businesses.',
+      description: 'We nurture the culture of entrepreneurship among PWDs by providing training, mentorship, and access to capital to help PWDs start and grow their own businesses.',
       href: '/programs',
       color: 'bg-amber-100 text-amber-600',
     },
     {
       icon: Award,
       title: 'Advocacy & Awareness',
-      description: 'Campaigns and initiatives to change mindsets and promote disability inclusion.',
+      description: 'We advocate for the rights, inclusion, and dignity of Persons with Disabilities in Uganda — shifting community mindsets, engaging local governments, and empowering PWDs to participate fully in social and economic life.',
       href: '/programs',
       color: 'bg-yellow-100 text-yellow-600',
     },
     {
       icon: BookOpen,
       title: 'Disability Support',
-      description: 'Direct assistance with healthcare, education, and livelihood support.',
+      description: 'We work to safeguard vulnerable individuals by providing assistive devices and directing assistance with healthcare, education, and livelihood support.',
       href: '/programs',
       color: 'bg-lime-100 text-lime-600',
     },
@@ -62,9 +64,9 @@ export default function Home() {
 
   const stats = [
     { number: '1000+', label: 'Beneficiaries Served', sub: 'and growing every month' },
-    { number: '50+', label: 'Communities Reached', sub: 'across Kampala & Wakiso' },
-    { number: '200+', label: 'Active Members', sub: 'in our VSLA groups' },
-    { number: '5', label: 'Years of Impact', sub: 'of sustained change' },
+    { number: '30+', label: 'Communities Reached', sub: 'across Kampala, Mukono & Wakiso' },
+    { number: '200+', label: 'Active Members', sub: 'Women leading the majority' },
+    { number: yearsOfImpact, label: 'Years of Impact', sub: 'of sustained change' },
   ]
 
   const stories = [
@@ -72,7 +74,7 @@ export default function Home() {
       id: 1,
       name: 'Grace Nakato',
       category: 'Entrepreneurship',
-      quote: 'JOSSUD gave me capital and confidence. My shop now employs two other PWDs.',
+      quote: 'JOSUDDI gave me capital and confidence. My shop now employs two other PWDs.',
       description: 'Grace used her VSLA savings to open a small grocery shop that now generates UGX 2M monthly.',
     },
     {
@@ -80,7 +82,7 @@ export default function Home() {
       name: 'David Ssemwogerere',
       category: 'Advocacy',
       quote: 'I used to feel invisible. Now I speak at community meetings and people listen.',
-      description: "David became a peer advocate after JOSSUD's training and has since influenced inclusion in 3 schools.",
+      description: "David became a peer advocate after JOSUDDI's training and has since influenced inclusion in 3 schools.",
     },
     {
       id: 3,
@@ -104,7 +106,7 @@ export default function Home() {
       <Header />
 
       {/* ── HERO ── */}
-      <section className="relative w-full min-h-[90vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-background overflow-hidden border-b border-border">
+      <section className="relative w-full min-h-[90vh] flex items-center bg-linear-to-br from-orange-50 via-amber-50 to-background overflow-hidden border-b border-border">
         {/* Animated blobs */}
         <div
           className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"
@@ -138,19 +140,19 @@ export default function Home() {
                 className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide"
                 style={{ animation: 'heroFadeUp 0.6s ease 0.1s both' }}
               >
-                Kampala & Wakiso, Uganda
+                Kampala Metropolitan Area, Uganda
               </span>
               <h1
                 className="text-4xl md:text-6xl font-bold text-foreground leading-tight text-balance"
                 style={{ animation: 'heroFadeUp 0.7s ease 0.25s both' }}
               >
-                Empowering <span className="text-primary">Persons with Disabilities</span> to Thrive
+                Empowering <span className="text-primary">Persons with Disabilities</span> to Build Better Lives
               </h1>
               <p
                 className="text-lg text-muted-foreground text-balance max-w-lg"
                 style={{ animation: 'heroFadeUp 0.7s ease 0.4s both' }}
               >
-                JOSSUD builds savings groups, entrepreneurship, and advocacy systems that create lasting dignity and independence for PWDs in Uganda.
+                JOSUDDI is a grassroots initiative born in 2022 from the lived experiences of PWDs in Kampala, Mukono, and Wakiso. We build savings groups, nurture entrepreneurship, and foster community solidarity because every person with a disability deserves dignity, independence, and a smile
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 pt-2"
@@ -179,7 +181,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">1,000+</span> lives changed since 2019
+                  <span className="font-semibold text-foreground">1,000+</span> lives touched since 2022
                 </p>
               </div>
             </div>
@@ -190,14 +192,14 @@ export default function Home() {
               style={{ animation: 'heroFadeUp 0.9s ease 0.3s both' }}
             >
               <div className="relative h-[420px] md:h-[520px] rounded-2xl overflow-hidden shadow-2xl border border-border">
-                <Image src="/images/hero-bg.jpg" alt="JOSSUD community gathering" fill className="object-cover" priority />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <Image src="/images/hero-bg.jpg" alt="JOSUDDI community gathering" fill className="object-cover" priority />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
               </div>
 
               <FloatingBadge className="absolute -bottom-6 -left-4 md:-left-8 bg-white dark:bg-card rounded-xl shadow-xl border border-border p-4 max-w-[260px]">
                 <Quote size={18} className="text-primary mb-2" />
                 <p className="text-sm text-foreground font-medium leading-snug">
-                  "JOSSUD didn't just give me money — they gave me knowledge and confidence."
+                  "JOSUDDI didn't just give me money — they gave me knowledge and confidence."
                 </p>
                 <p className="text-xs text-muted-foreground mt-2 font-semibold">— Judith, Bakery Owner</p>
               </FloatingBadge>

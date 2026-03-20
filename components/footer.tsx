@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Organization Info */}
           <div>
-            <h3 className="font-bold text-lg text-foreground mb-4">JOSSUD</h3>
+            <h3 className="font-bold text-lg text-foreground mb-4">JOSUDDI</h3>
             <p className="text-sm text-muted-foreground">
               Empowering Persons with Disabilities through advocacy, support, and community initiatives in Uganda.
             </p>
@@ -48,17 +48,17 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex gap-2 text-muted-foreground">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0 text-primary" />
-                <span>Kampala, Wakiso, Uganda</span>
+                <MapPin size={16} className="mt-0.5 shrink-0 text-primary" />
+                <span>Kampala, Wakiso, Mukono, Uganda</span>
               </li>
               <li className="flex gap-2 text-muted-foreground">
-                <Phone size={16} className="mt-0.5 flex-shrink-0 text-primary" />
-                <span>+256 XXX XXX XXX</span>
+                <Phone size={16} className="mt-0.5 shrink-0 text-primary" />
+                <span>+256 772 888 272</span>
               </li>
               <li className="flex gap-2 text-muted-foreground">
-                <Mail size={16} className="mt-0.5 flex-shrink-0 text-primary" />
-                <a href="mailto:info@jossud.org" className="hover:text-primary transition-colors">
-                  info@jossud.org
+                <Mail size={16} className="mt-0.5 shrink-0 text-primary" />
+                <a href="mailto:josuddi@gmail.com" className="hover:text-primary transition-colors">
+                  josuddi@gmail.com
                 </a>
               </li>
             </ul>
@@ -83,7 +83,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} JOSSUD. All rights reserved.
+            &copy; {currentYear} JOSUDDI. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">

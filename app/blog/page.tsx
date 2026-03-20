@@ -7,11 +7,11 @@ import { getAllBlogPosts } from '@/lib/blog'
 import { ArrowRight, Calendar, User, Tag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'JOSSUD Blog - Disability Awareness & Community Stories',
-  description: 'Read articles about disability empowerment, entrepreneurship, advocacy, and success stories from JOSSUD.',
+  title: 'JOSUDDI Blog - Disability Awareness & Community Stories',
+  description: 'Read articles about disability empowerment, entrepreneurship, advocacy, and success stories from JOSUDDI.',
   keywords: 'disability blog, PWD stories, advocacy articles, entrepreneurship, disability Uganda',
   openGraph: {
-    title: 'JOSSUD Blog - Disability Awareness & Community Stories',
+    title: 'JOSUDDI Blog - Disability Awareness & Community Stories',
     description: 'Read articles about disability empowerment, entrepreneurship, advocacy, and success stories.',
   },
 }
@@ -28,7 +28,7 @@ export default function Blog() {
       <section className="w-full py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5 border-b border-border">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            JOSSUD Blog & Updates
+            JOSUDDI Blog & Updates
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl text-balance">
             Stay informed about disability advocacy, entrepreneurship tips, success stories, and community initiatives.

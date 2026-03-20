@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact JOSSUD - Get Involved',
-  description: 'Contact JOSSUD in Kampala, Wakiso, Uganda. Reach out to donate, partner with us, or seek support for PWDs.',
+  title: 'Contact JOSUDDI - Get Involved',
+  description: 'Contact JOSUDDI in Kampala, Wakiso, Uganda. Reach out to donate, partner with us, or seek support for PWDs.',
   openGraph: {
-    title: 'Contact JOSSUD - Get Involved',
-    description: 'Contact JOSSUD in Kampala, Wakiso, Uganda. Reach out to donate, partner with us, or seek support.',
+    title: 'Contact JOSUDDI - Get Involved',
+    description: 'Contact JOSUDDI in Kampala, Wakiso, Uganda. Reach out to donate, partner with us, or seek support.',
   },
 }
 

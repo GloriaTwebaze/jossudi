@@ -5,11 +5,11 @@ import { CTASection } from '@/components/cta-section'
 import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About JOSSUD - Our Story & Mission',
-  description: 'Learn about JOSSUD, founded in 2022 to empower PWDs in Kampala and Wakiso through advocacy, support, and community initiatives.',
+  title: 'About JOSUDDI - Our Story & Mission',
+  description: 'Learn about JOSUDDI, founded in 2022 to empower PWDs in Kampala and Wakiso through advocacy, support, and community initiatives.',
   openGraph: {
-    title: 'About JOSSUD - Our Story & Mission',
-    description: 'Learn about JOSSUD, founded in 2022 to empower PWDs in Kampala and Wakiso through advocacy, support, and community initiatives.',
+    title: 'About JOSUDDI - Our Story & Mission',
+    description: 'Learn about JOSUDDI, founded in 2022 to empower PWDs in Kampala and Wakiso through advocacy, support, and community initiatives.',
   },
 }
 
@@ -52,7 +52,7 @@ export default function About() {
             Our Story & Mission
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl text-balance">
-            JOSSUD is dedicated to creating awareness and building support systems for Persons with Disabilities in Uganda.
+            JOSUDDI is dedicated to creating awareness and building support systems for Persons with Disabilities in Uganda.
           </p>
         </div>
       </section>
@@ -63,13 +63,13 @@ export default function About() {
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold text-foreground mb-6">Our Background</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              JOSSUD was founded in 2022 with a simple vision: to improve the lives of Persons with Disabilities in Uganda. We recognized that PWDs in our communities faced significant barriers to economic participation, social inclusion, and access to basic services.
+              JOSUDDI was founded in 2022 with a simple vision: to improve the lives of Persons with Disabilities in Uganda. We recognized that PWDs in our communities faced significant barriers to economic participation, social inclusion, and access to basic services.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Starting with just a handful of dedicated volunteers, we began working in Kampala and Wakiso to understand the real challenges faced by PWDs. Through conversations, research, and community engagement, we developed programs specifically designed to address these needs.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, JOSSUD has grown to serve over 1000 beneficiaries across multiple communities, but our core mission remains unchanged: to empower PWDs and create lasting, positive change.
+              Today, JOSUDDI has grown to serve over 1000 beneficiaries across multiple communities, but our core mission remains unchanged: to empower PWDs and create lasting, positive change.
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function About() {
       {/* CTA Section */}
       <CTASection
         title="Be Part of Our Mission"
-        description="Whether you're a PWD seeking support or someone who wants to contribute to our cause, there's a place for you at JOSSUD."
+        description="Whether you're a PWD seeking support or someone who wants to contribute to our cause, there's a place for you at JOSUDDI."
         buttons={[
           { label: 'Join Us', href: '/contact', variant: 'default' },
           { label: 'Learn Our Programs', href: '/programs', variant: 'outline' },

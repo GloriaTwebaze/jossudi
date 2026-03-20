@@ -6,12 +6,12 @@ import { CTASection } from '@/components/cta-section'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export const metadata: Metadata = {
-  title: 'Our Programs - JOSSUD Disability Support Initiatives',
-  description: 'Explore JOSSUD programs: Savings Groups (VSLAs), Entrepreneurship Support, Advocacy & Awareness, and Disability Support initiatives for PWDs in Uganda.',
+  title: 'Our Programs - JOSUDDI Disability Support Initiatives',
+  description: 'Explore JOSUDDI programs: Savings Groups (VSLAs), Entrepreneurship Support, Advocacy & Awareness, and Disability Support initiatives for PWDs in Uganda.',
   keywords: 'disability support Uganda, PWD initiatives, VSLAs, entrepreneurship for disabled, disability awareness Uganda',
   openGraph: {
     title: 'Our Programs - Disability Support Initiatives',
-    description: 'JOSSUD programs supporting PWDs through savings groups, entrepreneurship, advocacy, and community initiatives.',
+    description: 'JOSUDDI programs supporting PWDs through savings groups, entrepreneurship, advocacy, and community initiatives.',
   },
 }
 
@@ -98,7 +98,7 @@ export default function Programs() {
             Our Disability Support Programs
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl text-balance">
-            JOSSUD implements four comprehensive programs designed to empower PWDs and create sustainable community impact across Kampala and Wakiso.
+            JOSUDDI implements four comprehensive programs designed to empower PWDs and create sustainable community impact across Kampala and Wakiso.
           </p>
         </div>
       </section>
@@ -198,7 +198,7 @@ export default function Programs() {
       {/* CTA Section */}
       <CTASection
         title="Ready to Transform Your Life?"
-        description="Join thousands of PWDs who have benefited from JOSSUD programs. Contact us today to learn which program is right for you."
+        description="Join thousands of PWDs who have benefited from JOSUDDI programs. Contact us today to learn which program is right for you."
         buttons={[
           { label: 'Join a Program', href: '/contact', variant: 'default' },
           { label: 'Read Success Stories', href: '/impact-stories', variant: 'outline' },

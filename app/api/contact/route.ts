@@ -18,8 +18,8 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const result = await resend.emails.send({
-      from: 'JOSSUD <onboarding@resend.dev>', // to replace with verified domain after paying for hostinger
-      to: 'info@jossud.org',
+      from: 'JOSUDDI <onboarding@resend.dev>', // to replace with verified domain after paying for hostinger
+      to: '(josuddi@gmail.com)',
       replyTo: email,
       subject: `New Contact Form Submission: ${subject || 'No Subject'}`,
       html: `

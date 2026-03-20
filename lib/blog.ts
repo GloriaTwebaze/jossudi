@@ -41,7 +41,7 @@ export function getBlogPost(slug: string): BlogPost {
     slug,
     title: data.title || '',
     description: data.description || '',
-    author: data.author || 'JOSSUD Team',
+    author: data.author || 'JOSUDDI Team',
     date: data.date || new Date().toISOString(),
     category: data.category || 'General',
     image: data.image,

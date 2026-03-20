@@ -94,20 +94,20 @@ export default function Contact() {
 
               {/* Location */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
                     <MapPin size={20} className="text-primary" />
                   </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                  <p className="text-muted-foreground">Kampala & Wakiso Districts, Uganda</p>
+                  <p className="text-muted-foreground">Kampala, Wakiso & Mukono Districts, Uganda</p>
                 </div>
               </div>
 
               {/* Phone */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
                     <Phone size={20} className="text-primary" />
                   </div>
@@ -120,14 +120,14 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
                     <Mail size={20} className="text-primary" />
                   </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground">info@jossud.org</p>
+                  <p className="text-muted-foreground">josuddi@gmail.com</p>
                 </div>
               </div>
 
@@ -243,7 +243,7 @@ export default function Contact() {
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="p-4 rounded-lg bg-primary/10 border border-primary/20 flex gap-3">
-                      <Check className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                      <Check className="text-primary shrink-0 mt-0.5" size={20} />
                       <div>
                         <p className="font-semibold text-foreground">Message sent successfully!</p>
                         <p className="text-sm text-muted-foreground">Thank you for reaching out. We'll get back to you soon.</p>

@@ -6,10 +6,10 @@ import { CTASection } from '@/components/cta-section'
 import { Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Impact Stories - JOSSUD Success Stories',
-  description: 'Read inspiring success stories and testimonials from PWDs whose lives have been transformed through JOSSUD programs.',
+  title: 'Impact Stories - JOSUDDI Success Stories',
+  description: 'Read inspiring success stories and testimonials from PWDs whose lives have been transformed through JOSUDDI programs.',
   openGraph: {
-    title: 'Impact Stories - JOSSUD Success Stories',
+    title: 'Impact Stories - JOSUDDI Success Stories',
     description: 'Inspiring stories of PWDs transforming their lives through our programs.',
   },
 }
@@ -23,9 +23,9 @@ export default function ImpactStories() {
       program: 'Entrepreneurship Support',
       image: '/images/impact-story-1.jpg',
       imageAlt: 'Grace Nakibuule, successful PWD entrepreneur',
-      story: 'Grace was marginalized by her community due to her disability. Through JOSSUD\'s entrepreneurship program, she learned business skills and started a small grocery shop. Today, she employs two other PWDs and generates over UGX 2 million monthly. "JOSSUD gave me hope when I had none. I now support my family with dignity," Grace says.',
+      story: 'Grace was marginalized by her community due to her disability. Through JOSUDDI\'s entrepreneurship program, she learned business skills and started a small grocery shop. Today, she employs two other PWDs and generates over UGX 2 million monthly. "JOSUDDI gave me hope when I had none. I now support my family with dignity," Grace says.',
       impact: 'From unemployed to business owner; now employs 2 PWDs; monthly income: UGX 2M+',
-      quote: 'JOSSUD gave me hope when I had none. I now support my family with dignity.',
+      quote: 'JOSUDDI gave me hope when I had none. I now support my family with dignity.',
     },
     {
       id: 2,
@@ -45,9 +45,9 @@ export default function ImpactStories() {
       program: 'Disability Support & Skills Training',
       image: '/images/impact-story-3.jpg',
       imageAlt: 'Rebecca Owor in her massage therapy training',
-      story: 'Rebecca was unable to attend secondary school due to her visual impairment. JOSSUD provided educational support, assistive devices, and vocational training in massage therapy. She\'s now a recognized massage therapist earning good income and advocating for disabled students.',
+      story: 'Rebecca was unable to attend secondary school due to her visual impairment. JOSUDDI provided educational support, assistive devices, and vocational training in massage therapy. She\'s now a recognized massage therapist earning good income and advocating for disabled students.',
       impact: 'Completed vocational training; Now earns UGX 1.5M+ monthly; Advocates for disabled students',
-      quote: 'Without JOSSUD\'s support, I would still be sitting at home. Now I contribute to my family and community.',
+      quote: 'Without JOSUDDI\'s support, I would still be sitting at home. Now I contribute to my family and community.',
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function ImpactStories() {
       imageAlt: 'Joseph Katumba managing his community garden',
       story: 'Joseph faced severe discrimination due to his intellectual disability. Through our advocacy programs and vocational training, he learned horticultural skills. He now manages a community garden, grows vegetables for sale, and has become an advocate for PWD rights in his village.',
       impact: 'Managing community garden; Generates income from agriculture; Community advocate',
-      quote: 'My disability doesn\'t define me. JOSSUD helped me see my potential.',
+      quote: 'My disability doesn\'t define me. JOSUDDI helped me see my potential.',
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ export default function ImpactStories() {
       imageAlt: 'Fatima Nambi leading advocacy efforts in her community',
       story: 'Fatima faced the most severe marginalization due to her multiple disabilities. Our intensive support included assistive device provision, specialized training, and income support. She now leads peer support groups for other PWDs with multiple disabilities and advocates for their inclusion.',
       impact: 'Leads peer support groups; Trained in advocacy; Supported 15+ PWDs with multiple disabilities',
-      quote: 'Society said I was worthless. JOSSUD showed me my true value.',
+      quote: 'Society said I was worthless. JOSUDDI showed me my true value.',
     },
     {
       id: 6,
@@ -80,7 +80,7 @@ export default function ImpactStories() {
       imageAlt: 'David Lubega at his phone repair business',
       story: 'David participated in both VSLA and entrepreneurship programs. He saved money through the group, accessed a startup loan, and established a phone repair business. His shop now employs 3 people and serves the entire community.',
       impact: 'Business owner; Employs 3 people; Monthly income: UGX 3M+',
-      quote: 'JOSSUD believed in me when I didn\'t believe in myself. Now I believe in others.',
+      quote: 'JOSUDDI believed in me when I didn\'t believe in myself. Now I believe in others.',
     },
   ]
 
@@ -88,17 +88,17 @@ export default function ImpactStories() {
     {
       author: 'Martha Atim',
       title: 'VSLA Group Leader',
-      testimonial: 'As a VSLA leader, I\'ve seen how JOSSUD\'s programs unite our community. The respect and dignity given to PWDs through these programs is unmatched.',
+      testimonial: 'As a VSLA leader, I\'ve seen how JOSUDDI\'s programs unite our community. The respect and dignity given to PWDs through these programs is unmatched.',
     },
     {
       author: 'Pastor James Okello',
       title: 'Community Leader',
-      testimonial: 'JOSSUD has brought remarkable change to our community. The stigma against PWDs has reduced significantly thanks to their awareness campaigns.',
+      testimonial: 'JOSUDDI has brought remarkable change to our community. The stigma against PWDs has reduced significantly thanks to their awareness campaigns.',
     },
     {
       author: 'Dr. Susan Kyagaba',
       title: 'Healthcare Worker',
-      testimonial: 'I\'ve witnessed the health improvements in our community since JOSSUD\'s programs started. PWDs now have access to healthcare and psychological support.',
+      testimonial: 'I\'ve witnessed the health improvements in our community since JOSUDDI\'s programs started. PWDs now have access to healthcare and psychological support.',
     },
   ]
 
@@ -113,7 +113,7 @@ export default function ImpactStories() {
             Stories of Transformation
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl text-balance">
-            Read inspiring stories of how JOSSUD programs have transformed the lives of PWDs in Kampala and Wakiso.
+            Read inspiring stories of how JOSUDDI programs have transformed the lives of PWDs in Kampala and Wakiso.
           </p>
         </div>
       </section>

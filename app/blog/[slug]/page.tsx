@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   try {
     const post = getBlogPost(params.slug)
     return {
-      title: `${post.title} - JOSSUD Blog`,
+      title: `${post.title} - JOSUDDI Blog`,
       description: post.description,
       openGraph: {
         title: post.title,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   } catch (error) {
     return {
-      title: 'Blog Post - JOSSUD',
+      title: 'Blog Post - JOSUDDI',
     }
   }
 }
