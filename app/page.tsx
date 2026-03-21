@@ -36,28 +36,28 @@ export default function Home() {
       icon: Heart,
       title: 'Savings Groups (VSLAs)',
       description: 'We mobilize people with disabilities into self-help groups where members save weekly, access revolving loans, and grow their financial independence together.',
-      href: '/programs',
+      href: '/programs?tab=vslas',
       color: 'bg-orange-100 text-orange-600',
     },
     {
       icon: Users,
       title: 'Entrepreneurship Support',
       description: 'We nurture the culture of entrepreneurship among PWDs by providing training, mentorship, and access to capital to help PWDs start and grow their own businesses.',
-      href: '/programs',
+      href: '/programs?tab=entrepreneurship',
       color: 'bg-amber-100 text-amber-600',
     },
     {
       icon: Award,
       title: 'Advocacy & Awareness',
       description: 'We advocate for the rights, inclusion, and dignity of Persons with Disabilities in Uganda — shifting community mindsets, engaging local governments, and empowering PWDs to participate fully in social and economic life.',
-      href: '/programs',
+      href: '/programs?tab=advocacy',
       color: 'bg-yellow-100 text-yellow-600',
     },
     {
       icon: BookOpen,
       title: 'Disability Support',
       description: 'We work to safeguard vulnerable individuals by providing assistive devices and directing assistance with healthcare, education, and livelihood support.',
-      href: '/programs',
+      href: '/programs?tab=disability-support',
       color: 'bg-lime-100 text-lime-600',
     },
   ]
@@ -75,7 +75,8 @@ export default function Home() {
       name: 'John Ssempijja',
       category: 'Entrepreneurship',
       quote: 'Disability is not inability. I just needed an opportunity and support to prove myself.',
-      description: ' A young man with a hearing impairment, John struggled to find employment until he gained business skills and support through the initiative. Today, he runs a growing phone accessories business and earns a stable income',
+      description: ' A young man with a hearing impairment, John struggled to find employment until he gained business skills and support through the initiative. Today, he runs a growing phone accessories business and earns a stable income'
+      // href: '/impact-stories?story=1'
     },
     {
       id: 2,
@@ -83,6 +84,7 @@ export default function Home() {
       category: 'Advocacy',
       quote: 'I used to feel invisible. Now I speak at community meetings and people listen.',
       description: "David became a peer advocate after JOSUDDI's training and has since influenced inclusion in different communities.",
+      // href: '/impact-stories?story=2'
     },
     {
       id: 3,
@@ -90,6 +92,7 @@ export default function Home() {
       category: 'Savings Groups',
       quote: 'The VSLA group is my family. We save together, grow together.',
       description: 'Margaret leads her VSLA group of 15 women, collectively saving over UGX 6M in one year.',
+      // href: '/impact-stories?story=3'
     },
   ]
 
@@ -199,7 +202,7 @@ export default function Home() {
                 <p className="text-sm text-foreground font-medium leading-snug">
                   "JOSUDDI didn't just give me money — they gave me knowledge and confidence."
                 </p>
-                <p className="text-xs text-muted-foreground mt-2 font-semibold">— Judith, Bakery Owner</p>
+                <p className="text-xs text-muted-foreground mt-2 font-semibold">— Juliet, Poultry farmer</p>
               </FloatingBadge>
 
               <FloatingBadge className="absolute -top-4 -right-2 md:-right-6 bg-primary text-white rounded-xl shadow-xl p-4 text-center">

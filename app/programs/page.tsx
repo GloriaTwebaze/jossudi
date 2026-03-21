@@ -1,9 +1,19 @@
+
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CTASection } from '@/components/cta-section'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  FadeUp,
+  FadeIn,
+  SlideIn,
+  ScaleIn,
+  BounceIn,
+} from '@/components/animations'
+import { ProgramsTabs } from '@/components/programs-tabs'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Our Programs - JOSUDDI Disability Support Initiatives',
@@ -16,74 +26,22 @@ export const metadata: Metadata = {
 }
 
 export default function Programs() {
-  const programs = [
+  
+  const steps = [
     {
-      id: 'vslas',
-      title: 'Savings Groups (VSLAs)',
-      short: 'Village Savings and Loan Associations',
-      overview: 'Community-led financial groups that help PWDs save money, access credit, and build financial independence.',
-      image: '/images/vsla-program.jpg',
-      imageAlt: 'Women and men in a VSLA savings group meeting, managing finances together',
-      benefits: [
-        'Safe savings mechanism without banking fees',
-        'Access to emergency loans for health and education',
-        'Training in financial literacy and business management',
-        'Social support and peer mentoring',
-        'Opportunity to build credit history',
-      ],
-      impact: 'Our VSLA members have collectively saved over UGX 50 million and accessed loans for health services, education, and business startups.',
-      target: 'PWDs aged 18+, living in target communities',
+      number: '1',
+      title: 'Reach Out',
+      description: 'Contact us to discuss your needs or interests. We\'re here to help and answer any questions.',
     },
     {
-      id: 'entrepreneurship',
-      title: 'Entrepreneurship Support',
-      short: 'Business Training and Support',
-      overview: 'We provide comprehensive support to help PWDs start, scale, and sustain income-generating businesses.',
-      image: '/images/entrepreneurship.jpg',
-      imageAlt: 'Person with disability running their own successful business',
-      benefits: [
-        'Business skills and entrepreneurship training',
-        'Market linkages and business networking',
-        'Mentorship from successful entrepreneurs',
-        'Access to start-up capital through our funds',
-        'Ongoing business coaching and support',
-      ],
-      impact: 'Over 150 PWDs have started sustainable businesses, generating over UGX 200 million in annual income.',
-      target: 'PWDs with business ideas or existing businesses looking to grow',
+      number: '2',
+      title: 'Assessment',
+      description: 'We conduct a brief assessment to understand your situation and connect you with the right program.',
     },
     {
-      id: 'advocacy',
-      title: 'Advocacy & Awareness',
-      short: 'Disability Rights and Inclusion',
-      overview: 'We conduct campaigns and initiatives to change mindsets, promote disability rights, and advocate for policy inclusion.',
-      image: '/images/impact-story-2.jpg',
-      imageAlt: 'Community members and PWDs together in an awareness campaign',
-      benefits: [
-        'Community awareness campaigns on disability inclusion',
-        'Disability rights training and advocacy workshops',
-        'Policy engagement and government advocacy',
-        'Media campaigns challenging disability stigma',
-        'Youth leadership programs',
-      ],
-      impact: 'Our campaigns have reached 50+ communities and influenced local government policies on PWD inclusion.',
-      target: 'General public, PWDs, community leaders, and policymakers',
-    },
-    {
-      id: 'disability-support',
-      title: 'Disability Support Initiatives',
-      short: 'Direct Assistance Programs',
-      overview: 'Direct support programs addressing critical needs of PWDs including healthcare, education, and livelihood assistance.',
-      image: '/images/impact-story-3.jpg',
-      imageAlt: 'PWD receiving training and support for skill development',
-      benefits: [
-        'Healthcare and assistive device support',
-        'Education assistance and school supplies',
-        'Vocational training and skills development',
-        'Income support for destitute PWDs',
-        'Rehabilitation and counseling services',
-      ],
-      impact: 'Provided healthcare to 200+ PWDs, supported 80 children with disabilities to attend school, trained 100+ PWDs in various skills.',
-      target: 'Vulnerable and destitute PWDs in our communities',
+      number: '3',
+      title: 'Enrollment',
+      description: 'Join our program and begin your journey toward empowerment and lasting change.',
     },
   ]
 
@@ -91,119 +49,87 @@ export default function Programs() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5 border-b border-border">
+      {/* ── HERO ── */}
+      <section className="w-full py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5 border-b border-border overflow-hidden relative">
+        <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-primary/8 blur-3xl pointer-events-none" />
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Our Disability Support Programs
+          <style>{`
+            @keyframes heroFadeUp {
+              from { opacity: 0; transform: translateY(36px); }
+              to   { opacity: 1; transform: translateY(0); }
+            }
+          `}</style>
+          <span
+            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6"
+            style={{ animation: 'heroFadeUp 0.6s ease 0.1s both' }}
+          >
+            What We Do
+          </span>
+          <h1
+            className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance"
+            style={{ animation: 'heroFadeUp 0.7s ease 0.2s both' }}
+          >
+            Our Programs for PWDs in Uganda
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl text-balance">
-            JOSUDDI implements four comprehensive programs designed to empower PWDs and create sustainable community impact across Kampala and Wakiso.
+          <p
+            className="text-xl text-muted-foreground max-w-3xl text-balance"
+            style={{ animation: 'heroFadeUp 0.7s ease 0.35s both' }}
+          >
+            JOSUDDI supports over 1,000 PWDs across Kampala, Mukono, and Wakiso through savings groups,
+            entrepreneurship training, advocacy, and direct disability support. Building lasting economic
+            independence from the ground up.
           </p>
         </div>
       </section>
 
-      {/* Programs Section */}
+      {/* ── PROGRAMS TABS ── */}
       <section className="w-full py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="vslas" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
-              {programs.map((program) => (
-                <TabsTrigger key={program.id} value={program.id}>
-                  <span className="hidden sm:inline">{program.title.split(' ')[0]}</span>
-                  <span className="sm:hidden text-xs">{program.title.split(' ')[0]}</span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {programs.map((program) => (
-              <TabsContent key={program.id} value={program.id} className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-bold text-foreground mb-2">{program.title}</h2>
-                  <p className="text-lg text-accent font-semibold mb-6">{program.short}</p>
-
-                  <div className="relative h-80 rounded-lg overflow-hidden mb-8 border border-border">
-                    <Image
-                      src={program.image}
-                      alt={program.imageAlt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  <div className="prose prose-invert max-w-none">
-                    <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Overview</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">{program.overview}</p>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mt-8 mb-6">Key Benefits</h3>
-                  <ul className="space-y-3 mb-8">
-                    {program.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex gap-3">
-                        <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-primary/20 text-primary flex-shrink-0 text-sm font-semibold">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-                    <div className="p-6 rounded-lg border border-border bg-muted/30">
-                      <h4 className="font-semibold text-foreground mb-2">Our Impact</h4>
-                      <p className="text-muted-foreground">{program.impact}</p>
-                    </div>
-                    <div className="p-6 rounded-lg border border-border bg-muted/30">
-                      <h4 className="font-semibold text-foreground mb-2">Target Beneficiaries</h4>
-                      <p className="text-muted-foreground">{program.target}</p>
-                    </div>
-                  </div>
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
+          <Suspense fallback={<div className="h-96 animate-pulse bg-muted rounded-xl" />}>
+      <ProgramsTabs />
+    </Suspense>
         </div>
       </section>
 
-      {/* How to Participate */}
+      {/* ── HOW TO GET INVOLVED ── */}
       <section className="w-full py-16 md:py-20 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">How to Get Involved</h2>
+          <FadeUp className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">How to Get Involved</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Getting started is simple. Three steps stand between you and a community that has your back.
+            </p>
+          </FadeUp>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-lg border border-border bg-background p-8 text-center">
-              <div className="text-4xl font-bold text-primary mb-4">1</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Reach Out</h3>
-              <p className="text-muted-foreground">
-                Contact us to discuss your needs or interests. We're here to help and answer any questions.
-              </p>
-            </div>
-            <div className="rounded-lg border border-border bg-background p-8 text-center">
-              <div className="text-4xl font-bold text-primary mb-4">2</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Assessment</h3>
-              <p className="text-muted-foreground">
-                We conduct a brief assessment to understand your situation and connect you with the right program.
-              </p>
-            </div>
-            <div className="rounded-lg border border-border bg-background p-8 text-center">
-              <div className="text-4xl font-bold text-primary mb-4">3</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Enrollment</h3>
-              <p className="text-muted-foreground">
-                Join our program and begin your journey toward empowerment and change.
-              </p>
-            </div>
+            {steps.map((step, i) => (
+              <FadeUp key={step.number} delay={i * 150}>
+                <div className="group rounded-xl border border-border bg-background p-8 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <BounceIn delay={i * 150 + 200}>
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary text-2xl font-bold mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      {step.number}
+                    </div>
+                  </BounceIn>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </div>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection
-        title="Ready to Transform Your Life?"
-        description="Join thousands of PWDs who have benefited from JOSUDDI programs. Contact us today to learn which program is right for you."
-        buttons={[
-          { label: 'Join a Program', href: '/contact', variant: 'default' },
-          { label: 'Read Success Stories', href: '/impact-stories', variant: 'outline' },
-        ]}
-      />
+      {/* ── CTA ── */}
+      <ScaleIn>
+        <CTASection
+          title="Ready to Transform Your Life?"
+          description="Join over 1,000 PWDs who have benefited from JOSUDDI programs. Contact us today to learn which program is right for you."
+          buttons={[
+            { label: 'Join Our Program', href: '/contact', variant: 'default' },
+            { label: 'Read Success Stories', href: '/impact-stories', variant: 'outline' },
+          ]}
+        />
+      </ScaleIn>
 
       <Footer />
     </div>
