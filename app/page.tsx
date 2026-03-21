@@ -72,33 +72,31 @@ export default function Home() {
   const stories = [
     {
       id: 1,
-      name: 'Grace Nakato',
+      name: 'John Ssempijja',
       category: 'Entrepreneurship',
-      quote: 'JOSUDDI gave me capital and confidence. My shop now employs two other PWDs.',
-      description: 'Grace used her VSLA savings to open a small grocery shop that now generates UGX 2M monthly.',
+      quote: 'Disability is not inability. I just needed an opportunity and support to prove myself.',
+      description: ' A young man with a hearing impairment, John struggled to find employment until he gained business skills and support through the initiative. Today, he runs a growing phone accessories business and earns a stable income',
     },
     {
       id: 2,
       name: 'David Ssemwogerere',
       category: 'Advocacy',
       quote: 'I used to feel invisible. Now I speak at community meetings and people listen.',
-      description: "David became a peer advocate after JOSUDDI's training and has since influenced inclusion in 3 schools.",
+      description: "David became a peer advocate after JOSUDDI's training and has since influenced inclusion in different communities.",
     },
     {
       id: 3,
-      name: 'Margaret Akello',
+      name: 'Margaret Kizza',
       category: 'Savings Groups',
       quote: 'The VSLA group is my family. We save together, grow together.',
-      description: 'Margaret leads her VSLA group of 15 women, collectively saving over UGX 8M in one year.',
+      description: 'Margaret leads her VSLA group of 15 women, collectively saving over UGX 6M in one year.',
     },
   ]
 
   const partners = [
+    'Pilot Light Foundation',
     'Uganda Disability Union',
     'Ministry of Gender',
-    'NUDIPU',
-    'CBM Uganda',
-    'Light for the World',
   ]
 
   return (
@@ -152,7 +150,7 @@ export default function Home() {
                 className="text-lg text-muted-foreground text-balance max-w-lg"
                 style={{ animation: 'heroFadeUp 0.7s ease 0.4s both' }}
               >
-                JOSUDDI is a grassroots initiative born in 2022 from the lived experiences of PWDs in Kampala, Mukono, and Wakiso. We build savings groups, nurture entrepreneurship, and foster community solidarity because every person with a disability deserves dignity, independence, and a smile
+                We are a community-driven initiative supporting people with disabilities in Kampala and surrounding areas through economic empowerment, advocacy, and inclusive development programs.
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 pt-2"
@@ -277,7 +275,7 @@ export default function Home() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Real People, Real Change</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Stories of Change</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Behind every statistic is a person whose life was transformed. Here are just a few.
+              Behind every number is a person who was once told their disability was a limitation. These are the stories of those who proved otherwise.
             </p>
           </FadeUp>
 
@@ -290,7 +288,7 @@ export default function Home() {
                       src={`/images/impact-story-${story.id}.jpg`}
                       alt={story.name}
                       fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white text-xs font-semibold">
